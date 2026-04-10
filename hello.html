@@ -1,12 +1,309 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
-    <title>我的第一个网页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宏晞的个人首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        /* 标题样式 */
+        h1 {
+            color: #ff6600;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+        }
+
+        /* 介绍文本 */
+        .intro {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 30px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 模块标题 */
+        h2 {
+            color: #222;
+            margin: 30px 0 15px;
+            font-size: 1.6em;
+            border-left: 4px solid #ff6600;
+            padding-left: 10px;
+        }
+
+        /* 爱好标签 */
+        .hobby-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .hobby-tag {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            padding: 10px 25px;
+            font-size: 1em;
+            color: #333;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .hobby-tag:hover {
+            background: #ff6600;
+            color: #fff;
+            border-color: #ff6600;
+            transform: translateY(-2px);
+        }
+
+        /* 图片区域 */
+        .img-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .img-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* 网站链接 */
+        .link-box {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .link-box a {
+            color: #7209b7;
+            font-size: 1.1em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .link-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* 登录模块 */
+        .login-box {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            max-width: 400px;
+        }
+
+        .login-box label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .login-btn {
+            background: #ff6600;
+            color: #fff;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .login-btn:hover {
+            background: #e65c00;
+        }
+
+        .forgot-pwd {
+            color: #7209b7;
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        .forgot-pwd:hover {
+            text-decoration: underline;
+        }
+
+        /* 课表模块 */
+        .schedule-box {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        .schedule-table th {
+            background: #ff6600;
+            color: #fff;
+        }
+
+        .work {
+            color: #2ecc71;
+            font-weight: bold;
+        }
+
+        .rest {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>你好，世界！</h1>
-    <p>这是我的第一个网页。</p>
-    <p>我叫[你的名字]，正在学习前端开发。</p>
+    <!-- 标题 -->
+    <h1>欢迎来到宏晞的首页</h1>
+
+    <!-- 介绍 -->
+    <div class="intro">
+        这是我自己制作的网站，刚刚开始学习接触前端操作。我也在不断学习和进步，以后会定期更新首页，敬请期待！
+    </div>
+
+    <!-- 爱好模块 -->
+    <h2>这是我的爱好</h2>
+    <div class="hobby-list">
+        <div class="hobby-tag">阅读</div>
+        <div class="hobby-tag">编程</div>
+        <div class="hobby-tag">写作</div>
+        <div class="hobby-tag">旅行</div>
+        <div class="hobby-tag">听歌儿</div>
+        <div class="hobby-tag">剪辑</div>
+        <div class="hobby-tag">Ai制作</div>
+    </div>
+
+    <!-- 图片模块 -->
+    <h2>我最喜欢的图片</h2>
+    <div class="img-box">
+        <!-- 替换成你自己的图片路径即可 -->
+        <img src="https://picsum.photos/800/400" alt="我最喜欢的图片">
+    </div>
+
+    <!-- 网站链接 -->
+    <h2>我最喜欢的网站</h2>
+    <div class="link-box">
+        <a href="https://www.bilibili.com" target="_blank">哔哩哔哩</a>
+    </div>
+
+    <!-- 登录模块 -->
+    <h2>宏晞的登录</h2>
+    <div class="login-box">
+        <label for="username">用户名:</label>
+        <input type="text" id="username" placeholder="请输入用户名">
+
+        <label for="password">密码:</label>
+        <input type="password" id="password" placeholder="请输入密码">
+
+        <button class="login-btn" onclick="login()">登录</button>
+        <a href="#" class="forgot-pwd">忘记密码</a>
+    </div>
+
+    <!-- 课表模块 -->
+    <h2>我的课表</h2>
+    <div class="schedule-box">
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>星期</th>
+                    <th>状态</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>周一</td>
+                    <td class="work">上班</td>
+                </tr>
+                <tr>
+                    <td>周二</td>
+                    <td class="rest">休息</td>
+                </tr>
+                <tr>
+                    <td>周三</td>
+                    <td class="work">上班</td>
+                </tr>
+                <!-- 可自行补充周四到周日 -->
+                <tr>
+                    <td>周四</td>
+                    <td class="rest">休息</td>
+                </tr>
+                <tr>
+                    <td>周五</td>
+                    <td class="work">上班</td>
+                </tr>
+                <tr>
+                    <td>周六</td>
+                    <td class="rest">休息</td>
+                </tr>
+                <tr>
+                    <td>周日</td>
+                    <td class="rest">休息</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // 简单登录交互
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            if (username && password) {
+                alert(`登录成功！欢迎回来，${username}！`);
+            } else {
+                alert('请输入用户名和密码！');
+            }
+        }
+    </script>
 </body>
+
 </html>
